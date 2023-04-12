@@ -14,6 +14,7 @@ public class MyController {
 
     // Constructor injection RECOMMENDED
     // Define the constructor for dependency injection 
+    // @Qualifier also recommended above @Primary annotation on the beam
     @Autowired
     public MyController( @Qualifier("baseballCoach") Coach theCoach){
         myCoach = theCoach;

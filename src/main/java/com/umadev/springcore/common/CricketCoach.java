@@ -1,4 +1,4 @@
-package com.umadev.springcore;
+package com.umadev.springcore.common;
 
 import org.springframework.stereotype.Component;
 

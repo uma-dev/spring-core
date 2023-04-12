@@ -1,4 +1,4 @@
-package com.umadev.springcore;
+package com.umadev.springcore.common;
 
 public interface Coach {
     

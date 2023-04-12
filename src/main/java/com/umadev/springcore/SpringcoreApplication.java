@@ -19,4 +19,4 @@ public class SpringcoreApplication {
 		SpringApplication.run(SpringcoreApplication.class, args);
 	}
 
-}
+}  

@@ -1,6 +1,7 @@
 package com.umadev.springcore.rest;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -13,17 +14,24 @@ public class MyController {
 
     // Constructor injection RECOMMENDED
     // Define the constructor for dependency injection 
-    /*@Autowired
-    public MyController(Coach theCoach){
+    @Autowired
+    public MyController( @Qualifier("baseballCoach") Coach theCoach){
         myCoach = theCoach;
     }
+
+    // Field injection - NOT RECOMMENDED
+    /* No need to add constructors or setters but makes code 
+       harder to unit test.
+     @Autowired
+     private Coach myCoach 
     */
 
     // Setter injection
-    @Autowired
+    /*@Autowired
     public void setCoach(Coach theCoach){ //setter name doesn't matter, autowired makes the magic
         myCoach = theCoach;
     }
+    */
 
     @GetMapping("/dailyworkout")
     public String getDailyWorkout(){

@@ -16,7 +16,7 @@ public class MyController {
     // Define the constructor for dependency injection 
     // @Qualifier also recommended above @Primary annotation on the beam
     @Autowired
-    public MyController( @Qualifier("baseballCoach") Coach theCoach){
+    public MyController( @Qualifier("swimCoach") Coach theCoach){
         System.out.println("In class: " + getClass().getSimpleName());
         myCoach = theCoach;
     }

@@ -2,9 +2,6 @@ package com.umadev.springcore.common;
 
 import org.springframework.stereotype.Component;
 
-import jakarta.annotation.PostConstruct;
-import jakarta.annotation.PreDestroy;
-
 @Component
 // @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE) //if you want a different scope
 // @Primary // Use this annotation instead of Qualifier in constructor 
@@ -17,6 +14,7 @@ public class BaseballCoach implements Coach{
     }
 
     // Define init method
+    /*
     @PostConstruct
     public void doMyStartup(){
         System.out.println("In doMyStartup()");
@@ -27,6 +25,7 @@ public class BaseballCoach implements Coach{
     public void doMyCleanup(){
         System.out.println("In doMyCleanup()");
     }
+     */
 
     @Override
     public String getDailyWorkout() {
